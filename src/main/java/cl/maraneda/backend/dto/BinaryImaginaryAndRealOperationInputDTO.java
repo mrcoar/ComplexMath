@@ -12,5 +12,5 @@ public class BinaryImaginaryAndRealOperationInputDTO extends UnaryImaginaryOpera
             example = "2",
             requiredMode = Schema.RequiredMode.REQUIRED
     )
-    private double rinput;
+    protected double rinput;
 }

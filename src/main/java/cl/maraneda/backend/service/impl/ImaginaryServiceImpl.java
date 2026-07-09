@@ -8,6 +8,7 @@ import cl.maraneda.cplx.MathResult;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service
 public class ImaginaryServiceImpl implements ImaginaryService {
@@ -94,5 +95,164 @@ public class ImaginaryServiceImpl implements ImaginaryService {
     @Override
     public ImaginaryNumber sin(ImaginaryNumber in) {
         return ImaginaryMath.sin(in);
+    }
+
+    @Override
+    public double cos(ImaginaryNumber in) {
+        return ImaginaryMath.cos(in);
+    }
+
+    @Override
+    public ImaginaryNumber tan(ImaginaryNumber in) {
+        return ImaginaryMath.tan(in);
+    }
+
+    @Override
+    public double sec(ImaginaryNumber in) {
+        return ImaginaryMath.sec(in);
+    }
+
+    @Override
+    public ImaginaryNumber csc(ImaginaryNumber in) {
+        return ImaginaryMath.csc(in);
+    }
+
+    @Override
+    public ImaginaryNumber cot(ImaginaryNumber in) {
+        return ImaginaryMath.cot(in);
+    }
+
+    @Override
+    public ImaginaryNumber sinh(ImaginaryNumber in) {
+        return ImaginaryMath.sinh(in);
+    }
+
+    @Override
+    public double cosh(ImaginaryNumber in) {
+        return ImaginaryMath.cosh(in);
+    }
+
+    @Override
+    public ImaginaryNumber tanh(ImaginaryNumber in) {
+        return ImaginaryMath.tanh(in);
+    }
+
+    @Override
+    public double sech(ImaginaryNumber in) {
+        return ImaginaryMath.sech(in);
+    }
+
+    @Override
+    public ImaginaryNumber csch(ImaginaryNumber in) {
+        return ImaginaryMath.csch(in);
+    }
+
+    @Override
+    public ImaginaryNumber coth(ImaginaryNumber in) {
+        return ImaginaryMath.coth(in);
+    }
+
+    @Override
+    public ComplexNumber exp(ImaginaryNumber in) {
+        return ImaginaryMath.exp(in);
+    }
+
+    @Override
+    public ImaginaryNumber asin(ImaginaryNumber in) {
+        return ImaginaryMath.asin(in);
+    }
+
+    @Override
+    public ComplexNumber acos(ImaginaryNumber in) {
+        return ImaginaryMath.acos(in);
+    }
+
+    @Override
+    public ImaginaryNumber atan(ImaginaryNumber in) {
+        return ImaginaryMath.atan(in);
+    }
+
+    @Override
+    public ComplexNumber asec(ImaginaryNumber in) {
+        return ImaginaryMath.asec(in);
+    }
+
+    @Override
+    public ImaginaryNumber acsc(ImaginaryNumber in) {
+        return ImaginaryMath.acsc(in);
+    }
+
+    @Override
+    public ImaginaryNumber acot(ImaginaryNumber in) {
+        return ImaginaryMath.acot(in);
+    }
+
+    @Override
+    public ImaginaryNumber asinh(ImaginaryNumber in) {
+        return ImaginaryMath.asinh(in);
+    }
+
+    @Override
+    public ImaginaryNumber acosh(ImaginaryNumber in) {
+        return ImaginaryMath.acosh(in);
+    }
+
+    @Override
+    public ImaginaryNumber atanh(ImaginaryNumber in) {
+        return ImaginaryMath.atanh(in);
+    }
+
+    @Override
+    public ComplexNumber asech(ImaginaryNumber in) {
+        return ImaginaryMath.asech(in);
+    }
+
+    @Override
+    public ImaginaryNumber acsch(ImaginaryNumber in) {
+        return ImaginaryMath.acsch(in);
+    }
+
+    @Override
+    public ImaginaryNumber acoth(ImaginaryNumber in) {
+        return ImaginaryMath.acoth(in);
+    }
+
+    @Override
+    public double arg(ImaginaryNumber in) {
+        return ImaginaryMath.arg(in);
+    }
+
+    @Override
+    public ImaginaryNumber logI(double num){
+        return ImaginaryMath.logI(num);
+    }
+
+    @Override
+    public ComplexNumber logI(double num, ImaginaryNumber base, Integer k) {
+        return k == null ? ImaginaryMath.logI(num, base) : ImaginaryMath.logI(num, base, k);
+    }
+
+    @Override
+    public ComplexNumber logI(ImaginaryNumber num, ImaginaryNumber base, Integer k, Integer n) {
+        if(k == null && n == null){
+            return ImaginaryMath.logI(num, base);
+        }
+        if(k == null){
+            return ImaginaryMath.logI(num, base, 0, n);
+        }
+        return ImaginaryMath.logI(num, base, k, Objects.requireNonNullElse(n, 0));
+    }
+
+    @Override
+    public ComplexNumber logN(ImaginaryNumber num, double base, Integer k) {
+        if(base != 10) {
+            return k == null ? ImaginaryMath.logN(num, base) : ImaginaryMath.logN(num, base, k);
+        }
+        return k == null ? ImaginaryMath.log10(num) : ImaginaryMath.log10(num, k);
+    }
+
+    @Override
+    public ComplexNumber log(ImaginaryNumber num, Integer k) {
+        return k == null ? ImaginaryMath.log(num) : ImaginaryMath.log(num, k);
     }
 }

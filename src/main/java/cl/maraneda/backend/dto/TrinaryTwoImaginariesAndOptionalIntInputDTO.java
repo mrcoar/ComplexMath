@@ -6,17 +6,17 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class ImaginaryExpAndBasePowInputDTO extends UnaryImaginaryOperationInputDTO{
+public class TrinaryTwoImaginariesAndOptionalIntInputDTO extends UnaryImaginaryOperationInputDTO{
 
     @Schema(
-            description = "The imaginary base which will be raised to the power of an imaginary number",
+            description = "The second imaginary required number for the operation",
             example = "3i",
             requiredMode = Schema.RequiredMode.REQUIRED
     )
     private String base;
 
     @Schema(
-            description = "Indicates that the kth value of the natural logarithm of the base will be used. If it's ommited, assume a zero",
+            description = "The integer optional number for the operation",
             example = "4",
             requiredMode = Schema.RequiredMode.NOT_REQUIRED
     )

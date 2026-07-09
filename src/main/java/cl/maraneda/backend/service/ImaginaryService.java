@@ -29,4 +29,40 @@ public interface ImaginaryService {
     List<ComplexNumber> nrt(ImaginaryNumber in, int n);
 
     ImaginaryNumber sin(ImaginaryNumber in);
+    double cos(ImaginaryNumber in);
+    ImaginaryNumber tan(ImaginaryNumber in);
+    double sec(ImaginaryNumber in);
+    ImaginaryNumber csc(ImaginaryNumber in);
+    ImaginaryNumber cot(ImaginaryNumber in);
+
+    ImaginaryNumber sinh(ImaginaryNumber in);
+    double cosh(ImaginaryNumber in);
+    ImaginaryNumber tanh(ImaginaryNumber in);
+    double sech(ImaginaryNumber in);
+    ImaginaryNumber csch(ImaginaryNumber in);
+    ImaginaryNumber coth(ImaginaryNumber in);
+
+    ComplexNumber exp(ImaginaryNumber in);
+
+    ImaginaryNumber asin(ImaginaryNumber in);
+    ComplexNumber acos(ImaginaryNumber in);
+    ImaginaryNumber atan(ImaginaryNumber in);
+    ComplexNumber asec(ImaginaryNumber in);
+    ImaginaryNumber acsc(ImaginaryNumber in);
+    ImaginaryNumber acot(ImaginaryNumber in);
+
+    ImaginaryNumber asinh(ImaginaryNumber in);
+    ImaginaryNumber acosh(ImaginaryNumber in);
+    ImaginaryNumber atanh(ImaginaryNumber in);
+    ComplexNumber asech(ImaginaryNumber in);
+    ImaginaryNumber acsch(ImaginaryNumber in);
+    ImaginaryNumber acoth(ImaginaryNumber in);
+
+    double arg(ImaginaryNumber in);
+
+    ImaginaryNumber logI(double num);
+    ComplexNumber logI(double num, ImaginaryNumber base, Integer k);
+    ComplexNumber logI(ImaginaryNumber num, ImaginaryNumber base, Integer k, Integer n);
+    ComplexNumber logN(ImaginaryNumber num, double base, Integer k);
+    ComplexNumber log(ImaginaryNumber num, Integer k);
 }

@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class BinaryImaginaryAndIntOperationInputDTO extends UnaryImaginaryOperationInputDTO{
+public class BinaryImaginaryAndRequiredIntOperationInputDTO extends UnaryImaginaryOperationInputDTO{
     @Schema(
             description = "The exponent the imaginary number will be raised to the power of",
             example = "2",
